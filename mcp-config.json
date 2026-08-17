@@ -1,0 +1,9 @@
+{
+    "mcpServers":{
+        "devvault":{
+            "command":"npx",
+            "args":["tsx","src/mcp-server/server.ts"],
+            "cwd":"."
+        }
+    }
+}
