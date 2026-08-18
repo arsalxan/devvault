@@ -1,10 +1,10 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { registerAddNoteTool } from './add-note';
-import { registerSearchNotesTool } from './search-notes';
-import { registerListNotesTool } from './list-notes';
-import { registerDeleteNoteTool } from './delete-note';
-import { registerGetStatsTool } from './get-stats';
-import { registerImportFileTool } from './import-file';
+import { registerAddNoteTool } from './add-note.js';
+import { registerSearchNotesTool } from './search-notes.js';
+import { registerListNotesTool } from './list-notes.js';
+import { registerDeleteNoteTool } from './delete-note.js';
+import { registerGetStatsTool } from './get-stats.js';
+import { registerImportFileTool } from './import-file.js';
 
 export function registerTools(server: McpServer): void {
   registerAddNoteTool(server);

@@ -1,5 +1,5 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { getStats } from '../database';
+import { getStats } from '../database.js';
 
 export function registerGetStatsTool(server: McpServer): void {
   server.registerTool(

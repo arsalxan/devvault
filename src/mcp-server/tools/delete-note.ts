@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { deleteNote, getNoteById } from '../database';
-import { DeleteNoteSchema } from '../validators';
+import { deleteNote, getNoteById } from '../database.js';
+import { DeleteNoteSchema } from '../validators.js';
 
 export function registerDeleteNoteTool(server: McpServer): void {
   server.registerTool(

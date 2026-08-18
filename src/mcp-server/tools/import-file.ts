@@ -1,10 +1,10 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { readFileSync, statSync } from 'fs';
-import { addNote, searchNotes } from '../database';
-import { ImportFileSchema } from '../validators';
+import { addNote, searchNotes } from '../database.js';
+import { ImportFileSchema } from '../validators.js';
 import { inferCategory } from '../../config/settings.js';
 import { SETTINGS } from '../../config/settings.js';
-import { calculateSimilarity } from '../utils/similarity';
+import { calculateSimilarity } from '../utils/similarity.js';
 
 const MAX_CHUNK_SIZE = 5300; // 5000 content + 300 overhead
 const DUPLICATE_THRESHOLD = 0.90;

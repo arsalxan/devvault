@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { listNotes } from '../database';
-import { ListNotesSchema } from '../validators';
+import { listNotes } from '../database.js';
+import { ListNotesSchema } from '../validators.js';
 
 export function registerListNotesTool(server: McpServer): void {
   server.registerTool(

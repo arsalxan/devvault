@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { searchNotes } from '../database';
-import { SearchNotesSchema } from '../validators';
+import { searchNotes } from '../database.js';
+import { SearchNotesSchema } from '../validators.js';
 
 export function registerSearchNotesTool(server: McpServer): void {
   server.registerTool(

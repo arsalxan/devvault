@@ -1,5 +1,5 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { getStats, listNotes } from '../database';
+import { getStats, listNotes } from '../database.js';
 
 export function registerResources(server: McpServer): void {
   server.registerResource(
