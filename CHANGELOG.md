@@ -4,6 +4,19 @@ All notable changes to DevVault are documented in this file.
 
 ---
 
+## [1.1.1] - 2026-08-18
+
+### Fixed
+- Fixed all ESM imports with .js extensions for proper module resolution
+- Global installation now works correctly
+- `devvault` command executes without module resolution errors
+
+### Changed
+- Updated all relative imports to include .js extensions
+- Improved GitHub direct install instructions in README
+
+---
+
 ## [1.1.0] - 2026-08-18
 
 ### Added

@@ -8,7 +8,7 @@ import { registerResources } from './resources/index.js';
 
 const server = new McpServer({
   name: 'devvault',
-  version: '1.0.0',
+  version: '1.1.1',
 });
 
 registerTools(server);

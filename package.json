@@ -1,6 +1,6 @@
 {
   "name": "devvault",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Personal knowledge management MCP server for Claude Code - Save, search, and organize development notes with AI",
   "main": "dist/mcp-server/server.js",
   "bin": {
