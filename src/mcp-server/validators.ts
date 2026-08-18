@@ -52,3 +52,16 @@ export const DeleteNoteSchema = z.object({
   confirmText: z
     .literal('DELETE_NOTE'),
 });
+
+export const ImportFileSchema = z.object({
+  file_path: z
+    .string()
+    .min(1, 'File path cannot be empty')
+    .max(500, 'File path cannot exceed 500 characters')
+    .refine((path) => !path.includes('..'), {
+      message: 'File path cannot contain ".." (directory traversal not allowed)',
+    })
+    .refine((path) => path.endsWith('.txt') || path.endsWith('.md'), {
+      message: 'File must have a .txt or .md extension',
+    }),
+});

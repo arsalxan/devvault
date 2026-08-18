@@ -20,6 +20,7 @@ export const SETTINGS = {
   MAX_TAG_LENGTH: 30,
   MAX_TAGS_PER_NOTE: 10,
   MAX_QUERY_LENGTH: 200,
+  MAX_IMPORT_FILE_SIZE: 50000, // 50KB
 
   // Categories (Auto-assigned by Claude)
   VALID_CATEGORIES: [

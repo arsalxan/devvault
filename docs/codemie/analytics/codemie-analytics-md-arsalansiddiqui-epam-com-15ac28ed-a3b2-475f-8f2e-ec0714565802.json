@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-17T12:56:02.439Z",
+    "rangeLabel": "all",
+    "agents": [
+      "claude"
+    ],
+    "projectFilter": "all",
+    "totals": {
+      "sessions": 1,
+      "durationMs": 1043374,
+      "turns": 4,
+      "files": 0,
+      "netLines": 0,
+      "toolCallsTotal": 2,
+      "toolSuccessRate": 100,
+      "totalCostUSD": 0.13712370000000002,
+      "cacheReadCostUSD": 0.0451467,
+      "pricedSessions": 1
+    },
+    "unpricedModels": [],
+    "coverage": [
+      {
+        "agentName": "claude",
+        "total": 1,
+        "priced": 1,
+        "withLog": 1
+      }
+    ],
+    "userEmail": "md_arsalansiddiqui@epam.com",
+    "periodStart": "2026-08-17T12:38:36.591Z",
+    "periodEnd": "2026-08-17T12:55:59.965Z"
+  },
+  "sessions": [
+    {
+      "sessionId": "15ac28ed-a3b2-475f-8f2e-ec0714565802",
+      "agentName": "claude",
+      "provider": "ai-run-sso",
+      "title": "show me my knoledge based stats",
+      "project": "C:\\Users\\MdArsalanSiddiqui\\Desktop\\ClaudeProjects\\devvault",
+      "branch": "main",
+      "startTime": 1786970316591,
+      "durationMs": 1043374,
+      "turns": 4,
+      "fileOps": 0,
+      "linesAdded": 0,
+      "linesRemoved": 0,
+      "linesModified": 0,
+      "netLines": 0,
+      "filesChanged": 0,
+      "filesWritten": 0,
+      "filesEdited": 0,
+      "toolCallsTotal": 2,
+      "toolCallsSuccess": 2,
+      "toolCallsFailure": 0,
+      "models": [
+        "claude-sonnet-4-5-20250929"
+      ],
+      "languages": [],
+      "tools": [
+        {
+          "toolName": "mcp__devvault__get_stats",
+          "totalCalls": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "mcp__devvault__search_notes",
+          "totalCalls": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 100
+        }
+      ],
+      "tokens": {
+        "input": 34,
+        "output": 389,
+        "cacheRead": 150489,
+        "cacheCreation": 14340,
+        "cacheCreation1h": 14340,
+        "total": 165252
+      },
+      "costUSD": 0.13712370000000002,
+      "cacheReadCostUSD": 0.0451467,
+      "perModelCost": [
+        {
+          "model": "claude-sonnet-4-5-20250929",
+          "tokens": {
+            "input": 34,
+            "output": 389,
+            "cacheRead": 150489,
+            "cacheCreation": 14340,
+            "cacheCreation1h": 14340,
+            "total": 165252
+          },
+          "costUSD": 0.13712370000000002,
+          "unpriced": false
+        }
+      ],
+      "hadLog": true,
+      "costSeries": [
+        {
+          "t": 1786970328867,
+          "cost": 0.0720819,
+          "tokens": 41189
+        },
+        {
+          "t": 1786970334060,
+          "cost": 0.106872,
+          "tokens": 82408
+        },
+        {
+          "t": 1786970355145,
+          "cost": 0.1219317,
+          "tokens": 123772
+        },
+        {
+          "t": 1786970359551,
+          "cost": 0.1371237,
+          "tokens": 165252
+        }
+      ],
+      "skillInvocations": [],
+      "agentInvocations": [],
+      "commandInvocations": [],
+      "sessionSource": "Pure chat"
+    }
+  ]
+}

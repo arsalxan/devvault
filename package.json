@@ -1,7 +1,7 @@
 {
   "name": "devvault",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal knowledge management MCP server for Claude Code - Save, search, and organize development notes with AI",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
