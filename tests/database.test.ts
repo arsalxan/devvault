@@ -22,6 +22,10 @@ before(() => {
   originalWorkingDirectory = process.cwd();
   temporaryDirectory = mkdtempSync(path.join(tmpdir(), 'devvault-tests-'));
   process.chdir(temporaryDirectory);
+
+  // Override database path for tests
+  process.env.DEVVAULT_DB_PATH = path.join(temporaryDirectory, 'knowledge.db');
+
   initDatabase();
 });
 
@@ -31,6 +35,7 @@ beforeEach(() => {
 
 after(() => {
   closeDatabase();
+  delete process.env.DEVVAULT_DB_PATH;
   process.chdir(originalWorkingDirectory);
   rmSync(temporaryDirectory, { recursive: true, force: true });
 });

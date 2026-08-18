@@ -1,8 +1,10 @@
+#!/usr/bin/env node
+
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { closeDatabase, initDatabase } from './database';
-import { registerTools } from './tools';
-import { registerResources } from './resources';
+import { closeDatabase, initDatabase } from './database.js';
+import { registerTools } from './tools/index.js';
+import { registerResources } from './resources/index.js';
 
 const server = new McpServer({
   name: 'devvault',

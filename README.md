@@ -14,7 +14,47 @@ DevVault is an MCP server that gives Claude Code access to a personal knowledge 
 
 ## 🚀 Quick Start
 
-### 1. Installation
+### Option 1: Global Install (Recommended)
+
+Install once, use from anywhere:
+
+```bash
+# Clone and build
+git clone <repository-url>
+cd devvault
+npm install
+npm run build
+
+# Install globally
+npm install -g .
+
+# Verify
+devvault --version
+```
+
+**Configure Claude Code:**
+
+Edit `~/.claude/config/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "devvault": {
+      "command": "devvault"
+    }
+  }
+}
+```
+
+**Database location:** `~/.devvault/knowledge.db`
+
+📖 See [GLOBAL-INSTALL.md](docs/GLOBAL-INSTALL.md) for details and custom database paths.
+
+---
+
+### Option 2: Local Install
+
+Run from project directory only:
 
 ```bash
 # Clone the repository
@@ -28,9 +68,7 @@ npm install
 npm run build
 ```
 
-### 2. Configure Claude Code
-
-Add DevVault to your Claude Code MCP configuration:
+**Configure Claude Code:**
 
 **Windows:** `%USERPROFILE%\.claude\config\claude_desktop_config.json`  
 **macOS/Linux:** `~/.claude/config/claude_desktop_config.json`
@@ -46,7 +84,13 @@ Add DevVault to your Claude Code MCP configuration:
 }
 ```
 
-### 3. Start Using
+**Database location:** `devvault/data/knowledge.db`
+
+📖 See [SETUP.md](docs/SETUP.md) for detailed setup instructions.
+
+---
+
+### Start Using
 
 Restart Claude Code and start saving knowledge:
 
@@ -242,6 +286,38 @@ You don't need to specify category — Claude infers it automatically!
 ```
 ✅ "Import from C:/notes/git-commands.txt"
 ✅ "Load my learning notes from ~/dev-snippets.md"
+```
+
+---
+
+## 💾 Database Configuration
+
+### Default Locations
+
+**Global install:** `~/.devvault/knowledge.db` (in your home directory)  
+**Local install:** `data/knowledge.db` (in project directory)
+
+### Custom Database Path
+
+Set the `DEVVAULT_DB_PATH` environment variable:
+
+```bash
+# In your shell config (~/.bashrc, ~/.zshrc, etc.)
+export DEVVAULT_DB_PATH="$HOME/Documents/my-notes/knowledge.db"
+```
+
+Or in Claude config:
+```json
+{
+  "mcpServers": {
+    "devvault": {
+      "command": "devvault",
+      "env": {
+        "DEVVAULT_DB_PATH": "/custom/path/knowledge.db"
+      }
+    }
+  }
+}
 ```
 
 ---

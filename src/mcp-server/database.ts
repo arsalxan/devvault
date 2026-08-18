@@ -40,7 +40,7 @@ export function initDatabase(): Database.Database {
     return db;
   }
 
-  const dbPath = path.join(process.cwd(), SETTINGS.DB_PATH);
+  const dbPath = SETTINGS.DB_PATH;
   mkdirSync(path.dirname(dbPath), { recursive: true });
 
   db = new Database(dbPath);

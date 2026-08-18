@@ -4,6 +4,25 @@ All notable changes to DevVault are documented in this file.
 
 ---
 
+## [1.1.0] - 2026-08-18
+
+### Added
+- **Global installation support** - Install once, use from anywhere
+- `DEVVAULT_DB_PATH` environment variable for custom database location
+- GLOBAL-INSTALL.md documentation
+- npm bin entry for `devvault` command
+
+### Changed
+- Database path now defaults to `~/.devvault/knowledge.db` (home directory)
+- Updated README with global install instructions
+- Added shebang to server.ts for direct execution
+- Updated package.json with bin field and preferGlobal flag
+
+### Fixed
+- Database tests now properly override DB_PATH for isolation
+
+---
+
 ## [1.0.0] - 2026-08-18
 
 ### Added

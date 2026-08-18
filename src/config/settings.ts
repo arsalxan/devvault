@@ -1,13 +1,27 @@
 /*
   DevVault Configuration
-  
+
   Central place for all limits, defaults, and constants.
   Change behavior here — not scattered across code.
 */
 
+import { homedir } from 'os';
+import { join } from 'path';
+
+function getDefaultDbPath(): string {
+  // Use environment variable if set, otherwise default to home directory
+  const customPath = process.env.DEVVAULT_DB_PATH;
+  if (customPath) {
+    return customPath;
+  }
+
+  // Default: ~/.devvault/knowledge.db
+  return join(homedir(), '.devvault', 'knowledge.db');
+}
+
 export const SETTINGS = {
   // Database
-  DB_PATH: 'data/knowledge.db',
+  DB_PATH: getDefaultDbPath(),
 
   // Pagination (Token Management)
   DEFAULT_PAGE_SIZE: 10,
