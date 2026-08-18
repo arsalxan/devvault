@@ -1,7 +1,7 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { addNote } from '../database';
 import { AddNoteSchema } from '../validators';
-import { inferCategory } from '../../config/settings';
+import { inferCategory } from '../../config/settings.js';
 
 export function registerAddNoteTool(server: McpServer): void {
   server.registerTool(

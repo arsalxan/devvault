@@ -21,16 +21,22 @@ let originalWorkingDirectory: string;
 before(() => {
   originalWorkingDirectory = process.cwd();
   temporaryDirectory = mkdtempSync(path.join(tmpdir(), 'devvault-tests-'));
-  process.chdir(temporaryDirectory);
 
-  // Override database path for tests
+  // Override database path for tests BEFORE importing settings
   process.env.DEVVAULT_DB_PATH = path.join(temporaryDirectory, 'knowledge.db');
+
+  // Change to temp directory so any relative paths also work
+  process.chdir(temporaryDirectory);
 
   initDatabase();
 });
 
 beforeEach(() => {
-  getDatabase().exec('DELETE FROM notes');
+  // Clear all notes before each test
+  const db = getDatabase();
+  db.exec('DELETE FROM notes');
+  // Reset auto-increment counter
+  db.exec("DELETE FROM sqlite_sequence WHERE name='notes'");
 });
 
 after(() => {

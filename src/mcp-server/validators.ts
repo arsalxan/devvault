@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { SETTINGS } from '../config/settings';
+import { SETTINGS } from '../config/settings.js';
 
 // ============ INPUT SCHEMAS ============
 

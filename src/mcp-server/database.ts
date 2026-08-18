@@ -17,7 +17,7 @@
 import Database from 'better-sqlite3';
 import path from 'path';
 import { mkdirSync } from 'fs';
-import { SETTINGS } from '../config/settings';
+import { SETTINGS } from '../config/settings.js';
 
 let db: Database.Database | null = null;
 
