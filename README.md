@@ -18,9 +18,15 @@ DevVault is an MCP server that gives Claude Code access to a personal knowledge 
 
 Install once, use from anywhere:
 
+**Method 1: Install from GitHub (Recommended)**
+```bash
+npm install -g git+https://github.com/arsalxan/devvault.git
+```
+
+**Method 2: Clone and Build**
 ```bash
 # Clone and build
-git clone <repository-url>
+git clone https://github.com/arsalxan/devvault.git
 cd devvault
 npm install
 npm run build
@@ -30,6 +36,12 @@ npm install -g .
 
 # Verify
 devvault --version
+```
+
+**Method 3: From npm Registry (Coming Soon)**
+```bash
+# Once published to npm
+npm install -g devvault
 ```
 
 **Configure Claude Code:**
